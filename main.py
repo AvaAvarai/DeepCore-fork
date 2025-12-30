@@ -131,7 +131,7 @@ def main():
             checkpoint_name = "{dst}_{net}_{mtd}_exp{exp}_epoch{epc}_{dat}_{fr}_".format(dst=args.dataset,
                                                                                          net=args.model,
                                                                                          mtd=args.selection,
-                                                                                         dat=datetime.now(),
+                                                                                         dat=datetime.now().strftime("%Y-%m-%d_%H-%M-%S"),
                                                                                          exp=start_exp,
                                                                                          epc=args.epochs,
                                                                                          fr=args.fraction)
